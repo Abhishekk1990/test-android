@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/row_item_margin_horizontal"
+    android:paddingEnd="@dimen/row_item_margin_horizontal"
+    android:padding="@dimen/row_item_margin_horizontal"
+    android:paddingTop="@dimen/row_item_margin_vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/image_avtar"
+            android:layout_marginEnd="12dp"
+            android:layout_width="@dimen/avtar_dimensions"
+            android:layout_height="@dimen/avtar_dimensions"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+        <TextView
+            android:id="@+id/repo_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/titleColor"
+            android:layout_toEndOf="@id/image_avtar"
+            android:textSize="@dimen/repo_name_size" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/repo_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:paddingVertical="@dimen/row_item_margin_vertical"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/repo_description_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repo_name"
+        tools:ignore="UnusedAttribute"
+        tools:text="A collection of samples to discuss and showcase different architectural tools and patterns for Android apps."/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star"
+            />
+
+        <TextView
+            android:id="@+id/repo_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/star"
+            android:textSize="@dimen/repo_description_size"
+            tools:text="30"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
